@@ -1,6 +1,5 @@
 import React from "react";
 import AddView from "../components/AddView";
-import CardView from "../components/CardView";
 import Item from "../components/Item";
 import { Stack } from "@mui/material";
 

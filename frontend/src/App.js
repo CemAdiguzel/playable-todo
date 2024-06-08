@@ -3,15 +3,20 @@ import MainLayout from "./layout/MainLayout";
 import { getAllItems } from "./api/HandleApi";
 
 function App() {
-  const [allData, setAllData] = React.useState([]);
+  // const [allData, setAllData] = React.useState([]);
 
-  useEffect(() => {
-    getAllItems(setAllData);
-  }, []);
+  // useEffect(() => {
+  //   getAllItems(setAllData);
+  // }, []);
 
-  console.log(allData);
+  // console.log(allData);
 
-  return <MainLayout setAllData={setAllData} allData={allData} />;
+  return (
+    <MainLayout
+    //  setAllData={setAllData}
+    //   allData={allData}
+    />
+  );
 }
 
 export default App;

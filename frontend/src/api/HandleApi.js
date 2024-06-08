@@ -3,7 +3,7 @@ import axios from "axios";
 const baseUrl = "http://localhost:3001";
 
 const getAllItems = (setItems) => {
-  axios.get(baseUrl).then(({ data }) => {
+  axios.post(`${baseUrl}/getItems`).then(({ data }) => {
     console.log("data:", data);
     setItems(data);
   });

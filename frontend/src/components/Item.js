@@ -12,7 +12,7 @@ const Item = (props) => {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Typography variant="subtitle1">{data.text}</Typography>
+        <Typography variant="subtitle1">{data.title}</Typography>
         <Stack direction="row" spacing={0.5}>
           <SvgIcon sx={{ fontSize: "20px", color: "blue", cursor: "pointer" }}>
             <AiFillEdit />
