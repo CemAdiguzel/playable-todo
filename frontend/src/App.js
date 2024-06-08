@@ -11,7 +11,7 @@ function App() {
 
   console.log(allData);
 
-  return <MainLayout setAllData={setAllData} />;
+  return <MainLayout setAllData={setAllData} allData={allData} />;
 }
 
 export default App;
