@@ -18,11 +18,6 @@ module.exports.getUsersTodo = async (req, res) => {
     const userId = decoded.id;
 
     const toDos = await appModel.find({ user: userId }).sort({ updatedAt: -1 });
-
-    if (!toDos.length) {
-      return res.status(404).send("No todos found for this user");
-    }
-
     res.status(200).send(toDos);
   } catch (error) {
     console.log(error);
@@ -62,8 +57,6 @@ module.exports.createTodo = async (req, res) => {
     user.apps.push(savedApp._id);
     await user.save();
 
-    console.log("Todo added successfully");
-    console.log(savedApp);
     res.send(savedApp);
   } catch (error) {
     console.log(error);

@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+This project includes backend and frontend.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To start this project the user should open a terminal, and navigate into the playable-todo folder. After navigating inside our main folder:
 
-## Available Scripts
+To initialize the backend :
+cd backend
+npm install
+npm start
 
-In the project directory, you can run:
+after these line, the terminal should run:
+🚀 Server is running!  
+ 🔉 Listening on port 3001
 
-### `npm start`
+DB is up
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+then the backend is working.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+After starting the server, the user should open a new terminal, and navigate into the playable-todo folder. After navigating inside our main folder:
+to initialize the frontend:
+cd frontend
+npm install
+npm start
 
-### `npm test`
+after these lines, the terminal should run:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Compiled successfully!
 
-### `npm run build`
+You can now view frontend in the browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Local: http://localhost:3000  
+ On Your Network: http://192.168.1.43:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Note that the development build is not optimized.
+To create a production build, use npm run build.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+webpack compiled successfully
 
-### `npm run eject`
+Then the frontend is working as well. After that you can navigate through the app freely on http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Used Tech:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Node js
+Express js
+React js
+Axios
+Material UI.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If i had no limitations, I would prefer GraphQL for api, and Prisma for backend.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In this app there are basicly 4 things you can do. You can create, update, delete and read a To-Do Item. Basicly all the CRUD. I have not implemented multiple selection neither drag and drop feature. I had 2 days and for 1.5 day i was sick.
 
-## Learn More
+Initially i was planning on installing react-dnd-beautiful package for drag and drop feature. It would need to update the backend since lexorank should be added as well.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Also all the items in our todos includes a status variable. But i couldn't find what to do with them.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The toDo items has many to one relations with users.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Cem

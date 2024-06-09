@@ -1,28 +1,38 @@
-import { Button, Stack, TextField, Typography } from "@mui/material";
-import { useState } from "react";
-import React from "react";
-import { addItem } from "../api/HandleApi";
+import { Button, Stack } from "@mui/material";
+import React, { useState } from "react";
+import CreateDialog from "./Dialogs/CreateDialog";
 
 const AddView = (props) => {
-  const [todoValue, setTodoValue] = useState("");
-  const { setAllData } = props;
+  const { setAllData, allData } = props;
+  const [open, setOpen] = useState(false);
   return (
-    <Stack spacing={0.5}>
-      <Typography variant="body1"> Add new todo from below</Typography>
-      <Stack direction={"row"} spacing={1}>
-        <TextField
-          value={todoValue}
-          variant="outlined"
-          onChange={(e) => setTodoValue(e.target.value)}
-          size="small"
+    <Stack spacing={0.5} sx={{ pb: 2 }}>
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "#000",
+          fontSize: "12px",
+          fontWeight: 500,
+          borderRadius: 8,
+          p: 1,
+          "&:hover": {
+            backgroundColor: "#fff",
+            color: "#000",
+          },
+        }}
+        size="small"
+        onClick={() => setOpen(true)}
+      >
+        Create new todo
+      </Button>
+      {open && (
+        <CreateDialog
+          open={open}
+          setOpen={setOpen}
+          setAllData={setAllData}
+          allData={allData}
         />
-        <Button
-          variant="contained"
-          onClick={() => addItem(todoValue, setTodoValue, setAllData)}
-        >
-          Add
-        </Button>
-      </Stack>
+      )}
     </Stack>
   );
 };

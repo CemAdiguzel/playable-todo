@@ -1,10 +1,8 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import TodoTable from "../TableView/TodoTable";
-import Login from "../authComponents/Login";
 
-const MainLayout = (props) => {
-  const { setAllData, allData } = props;
+const MainLayout = () => {
   return (
     <Grid
       container
@@ -15,8 +13,7 @@ const MainLayout = (props) => {
         alignItems: "center",
       }}
     >
-      {/* <TodoTable setAllData={setAllData} allData={allData} /> */}
-      <Login />
+      <TodoTable />
     </Grid>
   );
 };

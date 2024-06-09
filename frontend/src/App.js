@@ -1,21 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Login from "./authComponents/Login";
+import Register from "./authComponents/Register";
 import MainLayout from "./layout/MainLayout";
-import { getAllItems } from "./api/HandleApi";
 
 function App() {
-  // const [allData, setAllData] = React.useState([]);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    localStorage.getItem("auth") || false
+  );
 
-  // useEffect(() => {
-  //   getAllItems(setAllData);
-  // }, []);
-
-  // console.log(allData);
+  useEffect(() => {
+    localStorage.setItem("auth", isAuthenticated);
+  }, [isAuthenticated]);
 
   return (
-    <MainLayout
-    //  setAllData={setAllData}
-    //   allData={allData}
-    />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isAuthenticated ? <MainLayout /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/login"
+          element={<Login setIsAuthenticated={setIsAuthenticated} />}
+        />
+        <Route
+          path="/signup"
+          element={<Register setIsAuthenticated={setIsAuthenticated} />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
