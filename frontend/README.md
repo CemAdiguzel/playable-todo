@@ -37,6 +37,8 @@ webpack compiled successfully
 
 Then the frontend is working as well. After that you can navigate through the app freely on http://localhost:3000
 
+At first login page will be open. If you dont have any user, you should click on the register button to navigate register page. You can create a new user from there and start using the app.
+
 Used Tech:
 
 Node js
